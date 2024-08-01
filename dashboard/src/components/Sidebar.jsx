@@ -47,6 +47,7 @@ const Sidebar = () => {
       );
       toast.success(res.data.message);
       setIsAuthenticated(false);
+      navigate("/login");
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -54,7 +55,7 @@ const Sidebar = () => {
   return (
     <>
       <nav
-        style={isAuthenticated ? { display: "none" } : { display: "flex" }}
+        style={!isAuthenticated ? { display: "none" } : { display: "flex" }}
         className={show ? "show sidebar" : "sidebar"}
       >
         <div className="links">
