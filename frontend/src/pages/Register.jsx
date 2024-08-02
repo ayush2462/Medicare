@@ -45,7 +45,7 @@ const Register = () => {
       toast.error(error.response.data.message);
     }
   };
-  if (isAuthenticated) {
+  if (!isAuthenticated) {
     return <Navigate to={"/"} />;
   }
   return (
