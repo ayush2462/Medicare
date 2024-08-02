@@ -21,6 +21,19 @@
         }
       ],
       "routes": [{ "src": "/(.*)", "dest": "dashboard/$1" }]
+    },
+    {
+      "name": "backend",
+      "root": "backend",
+      "builds": [
+        {
+          "src": "backend/*.js",
+          "use": "@vercel/node"
+        }
+      ],
+      "routes": [
+        { "src": "/api/(.*)", "dest": "backend/$1" }
+      ]
     }
   ]
 }
