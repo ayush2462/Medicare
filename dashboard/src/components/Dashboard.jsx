@@ -1,6 +1,10 @@
 
 
 const Dashboard = () => {
+
+  // if (!isAuthenticated) {
+  //   return <Navigate to={"/login"} />;
+  // }
   return (
     <div>
       
